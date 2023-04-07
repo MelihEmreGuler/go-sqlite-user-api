@@ -28,6 +28,8 @@ func dataGet() {
 func Api() {
 	fmt.Println("api")
 
+	dataGet()
+	
 	// Create a new router using the gorilla/mux package
 	r := mux.NewRouter()
 
@@ -81,5 +83,5 @@ func product(w http.ResponseWriter, r *http.Request) {
 
 	// Write the JSON-encoded response to the client
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(j)
+	w.Write(j) //fmt.Fprintf(w, string(j))
 }
