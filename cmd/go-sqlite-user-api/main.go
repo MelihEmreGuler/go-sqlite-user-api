@@ -11,7 +11,7 @@ import (
 func main() {
 	fmt.Println("...main")
 
-	api.Api()
 	database.Database()
+	api.Api()
 	ui.Ui()
 }
